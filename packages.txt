@@ -1,0 +1,1 @@
+bash-completion curl firewall4 ftp iproute2 libnftnl libunwind luci-app-firewall nethogs nftables nghttp3 ngtcp2 ppp tcp-brutal zlib
