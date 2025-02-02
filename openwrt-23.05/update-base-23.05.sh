@@ -88,9 +88,6 @@ rm -rf nghttp3/.git
 git clone https://github.com/sbwml/package_libs_ngtcp2 ngtcp2 --depth 1
 rm -rf ngtcp2/.git
 
-# curl
-git clone https://github.com/sbwml/feeds_packages_net_curl curl --depth 1
-rm -rf curl/.git
 
 # netkit-ftp
 git clone https://github.com/sbwml/package_new_ftp ftp --depth 1
