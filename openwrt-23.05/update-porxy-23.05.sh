@@ -33,11 +33,11 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' dae/Makefile
 # luci-app-homeproxy
 mv immortalwrt/luci-app-homeproxy ./
 
-# luci-app-mihomo
-sed -i 's|https://github.com|https://gh.api.99988866.xyz/https://github.com|g' openwrt-mihomo/luci-app-mihomo/htdocs/luci-static/resources/view/mihomo/mixin.js
-sed -i 's|https://github.com|https://gh.api.99988866.xyz/https://github.com|g' openwrt-mihomo/mihomo/files/mihomo.conf
-mv openwrt-mihomo/*/ ./
-rm -rf openwrt-mihomo
+# luci-app-nikki
+sed -i 's|https://github.com|https://gh.api.99988866.xyz/https://github.com|g' openwrt-nikki/luci-app-nikki/htdocs/luci-static/resources/view/nikki/mixin.js
+sed -i 's|https://github.com|https://gh.api.99988866.xyz/https://github.com|g' openwrt-nikki/nikki/files/nikki.conf
+mv openwrt-nikki/*/ ./
+rm -rf openwrt-nikki
 
 
 rm -rf immortalwrt *.patch
