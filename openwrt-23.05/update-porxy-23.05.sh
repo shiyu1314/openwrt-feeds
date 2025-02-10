@@ -34,8 +34,6 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' dae/Makefile
 mv immortalwrt/luci-app-homeproxy ./
 
 # luci-app-nikki
-sed -i 's|https://github.com|https://gh.api.99988866.xyz/https://github.com|g' openwrt-nikki/luci-app-nikki/htdocs/luci-static/resources/view/nikki/mixin.js
-sed -i 's|https://github.com|https://gh.api.99988866.xyz/https://github.com|g' openwrt-nikki/nikki/files/nikki.conf
 mv openwrt-nikki/*/ ./
 rm -rf openwrt-nikki
 
