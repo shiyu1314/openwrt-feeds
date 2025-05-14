@@ -14,7 +14,7 @@ git clone https://github.com/nikkinikki-org/OpenWrt-nikki openwrt-nikki --depth 
 git clone https://github.com/pmkol/v2ray-geodata --depth 1
 git clone https://github.com/vernesong/OpenClash --depth 1
 rm -rf immortalwrt/luci-app-homeproxy/{.git,.github,LICENSE,README}
-rm -rf openwrt_helloworld/{luci-app-homeproxy,luci-app-mihomo,mihomo,v2ray-geodata,luci-app-openclash,luci-app-ssr-plus}
+rm -rf openwrt_helloworld/{luci-app-homeproxy,luci-app-nikki,nikki,v2ray-geodata,luci-app-openclash,luci-app-ssr-plus}
 rm -rf v2ray-geodata/.git
 mv -f openwrt_helloworld/*.patch ./
 mv OpenClash/*/ ./
