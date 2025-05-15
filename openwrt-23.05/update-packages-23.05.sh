@@ -226,7 +226,7 @@ sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-vsftpd/Makefile
 sed -i 's/"order": 1050/"order": 80/g' luci-app-zerotier/root/usr/share/luci/menu.d/luci-app-zerotier.json
 
 # luci-theme-material3
-rm -rf luci-theme-material3/.git
+rm -rf luci-theme-material3/{.git,.github}
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-theme-material3/Makefile
 
 # ddns-scripts
