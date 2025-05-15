@@ -26,7 +26,7 @@ git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic --
 git clone https://github.com/asvow/luci-app-tailscale --depth 1
 git clone https://github.com/muink/openwrt-einat-ebpf einat-ebpf --depth 1
 git clone https://github.com/muink/luci-app-einat --depth 1
-git clone -b openwrt-24.10 --depth 1 --single-branch https://github.com/sbwml/luci-theme-argon openwrt-argon
+git clone -b main --depth 1 --single-branch https://github.com/AngelaCooljx/luci-theme-material3 luci-theme-material3
 git clone https://github.com/pmkol/openwrt-eqosplus --depth 1
 git clone https://github.com/pmkol/packages_net_miniupnpd miniupnpd --depth 1
 git clone https://github.com/pmkol/luci-app-upnp --depth 1
@@ -225,10 +225,8 @@ sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-vsftpd/Makefile
 # luci-app-zerotier
 sed -i 's/"order": 1050/"order": 80/g' luci-app-zerotier/root/usr/share/luci/menu.d/luci-app-zerotier.json
 
-# luci-theme-argon
-mv openwrt-argon/*/ ./
-rm -rf openwrt-argon
-rm -rf luci-app-argon-config/po/!(templates|zh_Hans)
+# luci-theme-material3
+sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-theme-material3/Makefile
 
 # ddns-scripts
 mv immortalwrt/packages/net/ddns-scripts ./
