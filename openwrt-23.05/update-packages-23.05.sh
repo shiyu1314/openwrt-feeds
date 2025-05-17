@@ -229,6 +229,18 @@ sed -i 's/"order": 1050/"order": 80/g' luci-app-zerotier/root/usr/share/luci/men
 rm -rf luci-theme-material3/{.git,Readme.md}
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-theme-material3/Makefile
 sed -i '/uci -q delete luci.themes.Material3Red/a \	uci set luci.main.mediaurlbase=\x27/luci-static/bootstrap\x27' luci-theme-material3/Makefile
+echo '#!/bin/sh
+
+if [ "$PKG_UPGRADE" != 1 ]; then
+	uci get luci.themes.material3 >/dev/null 2>&1 || \
+	uci batch <<-EOF
+		set luci.themes.material3=/luci-static/material3
+		set luci.main.mediaurlbase=/luci-static/material3
+		commit luci
+	EOF
+fi
+
+exit 0' > luci-theme-material3/root/etc/uci-defaults/30_luci-theme && chmod +x luci-theme-material3/root/etc/uci-defaults/30_luci-theme
 
 # ddns-scripts
 mv immortalwrt/packages/net/ddns-scripts ./
