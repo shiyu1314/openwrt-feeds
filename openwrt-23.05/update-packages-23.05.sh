@@ -229,7 +229,7 @@ sed -i 's/"order": 1050/"order": 80/g' luci-app-zerotier/root/usr/share/luci/men
 rm -rf luci-theme-material3/{.git,Readme.md}
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-theme-material3/Makefile
 sed -i '/uci -q delete luci.themes.Material3Red/a \	uci set luci.main.mediaurlbase=\x27/luci-static/bootstrap\x27' luci-theme-material3/Makefile
-sed -i "s/changed=0/changed=1/" luci-theme-material3/root/etc/uci-defaults/30_luci-theme-material3
+chmod +x luci-theme-material3/root/etc/uci-defaults/30_luci-theme-material3
 
 # ddns-scripts
 mv immortalwrt/packages/net/ddns-scripts ./
