@@ -18,7 +18,7 @@ git clone https://github.com/sbwml/luci-app-airconnect openwrt-airconnect --dept
 git clone https://github.com/sbwml/luci-app-mentohust openwrt-mentohust --depth 1
 git clone https://github.com/sbwml/luci-app-mosdns openwrt-mosdns -b v5-lua --depth 1
 git clone https://github.com/sbwml/luci-app-qbittorrent openwrt-qbittorrent --depth 1
-git clone https://github.com/sbwml/OpenAppFilter openwrt-oaf --depth 1
+git clone https://github.com/pmkol/openwrt-oaf --depth 1
 git clone https://github.com/sbwml/feeds_packages_libs_liburing liburing --depth 1
 git clone https://github.com/sbwml/feeds_packages_net_samba4 samba4 --depth 1
 git clone https://github.com/sbwml/feeds_packages_utils_unzip unzip --depth 1
