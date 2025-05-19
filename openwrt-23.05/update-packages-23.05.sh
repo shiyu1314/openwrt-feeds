@@ -209,6 +209,11 @@ else
     rm -f tailscale/Makefile
     mv /tmp/extd/tailscale/Makefile tailscale/Makefile
 fi
+rm -f tailscale/files/{tailscale.conf,tailscale.init}
+mv luci-app-tailscale/root/etc/config/tailscale tailscale/files/tailscale.conf
+mv luci-app-tailscale/root/etc/init.d/tailscale tailscale/files/tailscale.init
+[ -z "$(ls -A luci-app-tailscale/root/etc/config 2>/dev/null)" ] && rm -rf luci-app-tailscale/root/etc/config
+[ -z "$(ls -A luci-app-tailscale/root/etc/init.d 2>/dev/null)" ] && rm -rf luci-app-tailscale/root/etc/init.d
 sed -i 's/"order": 90/"order": 80/g' luci-app-tailscale/root/usr/share/luci/menu.d/luci-app-tailscale.json
 
 # luci-app-unblockneteasemusic
