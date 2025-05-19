@@ -88,6 +88,10 @@ rm -rf ngtcp2/.git
 git clone https://github.com/sbwml/feeds_packages_net_curl curl --depth 1
 rm -rf curl/.git
 
+# libpcap
+git clone https://github.com/sbwml/package_libs_libpcap libpcap --depth 1
+rm -rf libpcap/.git
+
 # netkit-ftp
 git clone https://github.com/sbwml/package_new_ftp ftp --depth 1
 rm -rf ftp/.git
