@@ -46,8 +46,9 @@ rm -rf miniupnpd/{.git,.github}
 rm -rf luci-app-upnp/{.git,.github}
 rm -rf qosmate/{.git,LICENSE,README.md}
 rm -rf luci-app-qosmate/{.git,LICENSE,README.md}
-git clone https://github.com/sirpdboy/luci-app-lucky -b main --depth 1
-rm -rf luci-app-qosmate/{.git,doc,README.md}
+git clone https://github.com/sirpdboy/luci-app-lucky lucky -b main --depth 1
+rm -rf lucky/{.git,doc,README.md}
+mv lucky/*/ ./
 
 # pkgs
 mv openwrt_pkgs/*/ ./
