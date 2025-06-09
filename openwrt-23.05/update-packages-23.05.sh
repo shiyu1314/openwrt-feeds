@@ -33,6 +33,7 @@ git clone https://github.com/pmkol/luci-app-upnp --depth 1
 git clone https://github.com/pmkol/packages_net_qosmate qosmate --depth 1
 git clone https://github.com/pmkol/luci-app-qosmate --depth 1
 git clone https://github.com/shiyu1314/openwrt-packages --depth 1
+rm -rf luci-app-adguardhome
 rm -rf openwrt_pkgs/{bash-completion,luci-app-ota,fw_download_tool,luci-app-adguardhome}
 rm -rf openwrt-ddns-go/luci-app-ddns-go/README.md
 rm -rf liburing/.git
@@ -49,6 +50,10 @@ rm -rf luci-app-qosmate/{.git,LICENSE,README.md}
 git clone https://github.com/sirpdboy/luci-app-lucky lucky -b main --depth 1
 rm -rf lucky/{.git,doc,README.md}
 mv lucky/*/ ./
+
+git clone https://github.com/sirpdboy/luci-app-adguardhome adg -b js --depth 1
+rm -rf adg/{.git,README.md}
+mv adg/*/ ./
 
 # pkgs
 mv openwrt_pkgs/*/ ./
@@ -308,5 +313,5 @@ mv immortalwrt/luci/applications/luci-app-dockerman ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-dockerman/Makefile
 
 
-rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist
+rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
