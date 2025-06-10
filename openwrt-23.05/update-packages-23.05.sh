@@ -35,6 +35,7 @@ git clone https://github.com/pmkol/packages_net_qosmate qosmate --depth 1
 git clone https://github.com/pmkol/luci-app-qosmate --depth 1
 git clone https://github.com/shiyu1314/openwrt-packages --depth 1
 rm -rf luci-app-adguardhome
+rm -rf .git
 rm -rf openwrt_pkgs/{bash-completion,luci-app-ota,fw_download_tool,luci-app-adguardhome}
 rm -rf openwrt-ddns-go/luci-app-ddns-go/README.md
 rm -rf liburing/.git
@@ -52,6 +53,8 @@ git clone https://github.com/sirpdboy/luci-app-lucky lucky -b main --depth 1
 rm -rf lucky/{.git,doc,README.md}
 mv lucky/*/ ./
 
+https://github.com/pmkol/openwrt-adguardhome --depth 1
+
 # luci-app-adguardhome
 mv openwrt-adguardhome/*/ ./
 mv openwrt/packages-master/net/adguardhome ./
@@ -59,8 +62,7 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' adguardhome/Makefile
 rm -rf openwrt-adguardhome
 
 
-sed -i 's/Arch="arm"/Arch="armv7"/' openwrt_pkgs/luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
-sed -i 's/+adguardhome/+AdGuardHome/' openwrt_pkgs/luci-app-adguardhome/Makefile
+sed -i 's/Arch="arm"/Arch="armv7"/' luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
 
 # pkgs
 mv openwrt_pkgs/*/ ./
