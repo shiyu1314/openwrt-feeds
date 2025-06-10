@@ -58,7 +58,7 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' adguardhome/Makefile
 sed -i '73,83d' adguardhome/Makefile
 
 
-sed -i 's/Arch="arm"/Arch="armv7"/' luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
+sed -i 's/Arch="arm"/Arch="armv7"/' openwrt_pkgs/luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
 
 # pkgs
 mv openwrt_pkgs/*/ ./
