@@ -53,8 +53,6 @@ git clone https://github.com/sirpdboy/luci-app-lucky lucky -b main --depth 1
 rm -rf lucky/{.git,doc,README.md}
 mv lucky/*/ ./
 
-https://github.com/pmkol/openwrt-adguardhome --depth 1
-
 # luci-app-adguardhome
 mv openwrt-adguardhome/*/ ./
 mv openwrt/packages-master/net/adguardhome ./
