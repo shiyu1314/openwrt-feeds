@@ -26,7 +26,7 @@ git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic --
 git clone https://github.com/asvow/luci-app-tailscale --depth 1
 git clone https://github.com/muink/openwrt-einat-ebpf einat-ebpf --depth 1
 git clone https://github.com/muink/luci-app-einat --depth 1
-https://github.com/pmkol/openwrt-adguardhome --depth 1
+git clone https://github.com/pmkol/openwrt-adguardhome --depth 1
 git clone -b main --depth 1 --single-branch https://github.com/AngelaCooljx/luci-theme-material3 luci-theme-material3
 git clone https://github.com/pmkol/openwrt-eqosplus --depth 1
 git clone https://github.com/pmkol/packages_net_miniupnpd miniupnpd --depth 1
