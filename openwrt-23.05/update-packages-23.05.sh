@@ -57,7 +57,7 @@ sed -i "s/PKG_ARCH_ADGUARDHOME:=arm/PKG_ARCH_ADGUARDHOME:=armv7/" adguardhome/Ma
 
 
 sed -i 's/Arch="arm"/Arch="armv7"/' openwrt_pkgs/luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
-sed -i 's/adguardhome/AdGuardHome/' openwrt_pkgs/luci-app-adguardhome/Makefile
+sed -i 's/+adguardhome/+AdGuardHome/' openwrt_pkgs/luci-app-adguardhome/Makefile
 
 # pkgs
 mv openwrt_pkgs/*/ ./
