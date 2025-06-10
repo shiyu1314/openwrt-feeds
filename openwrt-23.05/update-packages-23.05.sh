@@ -55,7 +55,7 @@ git clone https://github.com/happyzhang1995/openwrt-adguardhome adguardhome --de
 rm -rf adguardhome/{.git,LICENSE,README.md}
 sed -i "s/PKG_ARCH_ADGUARDHOME:=arm/PKG_ARCH_ADGUARDHOME:=armv7/" adguardhome/Makefile
 
-sed -i "s/Arch="armv7"/Arch="armv7"/" luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
+sed -i 's/Arch="arm"/Arch="armv7"/' openwrt_pkgs/luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
 
 # pkgs
 mv openwrt_pkgs/*/ ./
