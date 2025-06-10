@@ -51,9 +51,9 @@ git clone https://github.com/sirpdboy/luci-app-lucky lucky -b main --depth 1
 rm -rf lucky/{.git,doc,README.md}
 mv lucky/*/ ./
 
-git clone https://github.com/happyzhang1995/openwrt-adguardhome adguardhome --depth 1
-rm -rf adguardhome/{.git,LICENSE,README.md}
-sed -i "s/PKG_ARCH_ADGUARDHOME:=arm/PKG_ARCH_ADGUARDHOME:=armv7/" adguardhome/Makefile
+git clone https://github.com/happyzhang1995/openwrt-adguardhome AdGuardHome --depth 1
+rm -rf AdGuardHome/{.git,LICENSE,README.md}
+sed -i "s/PKG_ARCH_ADGUARDHOME:=arm/PKG_ARCH_ADGUARDHOME:=armv7/" AdGuardHome/Makefile
 
 
 sed -i 's/Arch="arm"/Arch="armv7"/' openwrt_pkgs/luci-app-adguardhome/root/usr/share/AdGuardHome/update_core.sh
