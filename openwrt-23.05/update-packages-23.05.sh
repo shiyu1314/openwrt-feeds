@@ -55,7 +55,6 @@ mv lucky/*/ ./
 # luci-app-adguardhome
 mv openwrt/packages-master/net/adguardhome ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' adguardhome/Makefile
-rm -rf openwrt-adguardhome
 sed -i '73,83d' adguardhome/Makefile
 
 
