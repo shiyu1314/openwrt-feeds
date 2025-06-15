@@ -309,10 +309,10 @@ curl -s https://$mirror/openwrt-23.05/patch/aria2/aria2.conf > aria2/files/aria2
 
 
 # alist
-git clone https://github.com/sbwml/openwrt-alist openwrt-alist
-rm -rf openwrt-alist/{.git,.github,README.md,install.sh}
-sed -i "s/Basic Setting/Basic Settings/" openwrt-alist/luci-app-alist/po/zh_Hans/alist.po
-mv openwrt-alist/* ./
+git clone https://github.com/sbwml/luci-app-openlist -b dev openlist
+rm -rf openlist/{.git,.github,README.md,install.sh}
+#sed -i "s/Basic Setting/Basic Settings/" openwrt-alist/luci-app-alist/po/zh_Hans/alist.po
+mv openlist/* ./
 
 mv immortalwrt/luci/applications/luci-app-dockerman ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-dockerman/Makefile
