@@ -8,6 +8,8 @@ mv */ /tmp/extd/
 # download feeds
 git clone https://github.com/openwrt/luci openwrt/luci -b openwrt-23.05 --depth 1
 git clone https://github.com/openwrt/packages openwrt/packages -b openwrt-23.05 --depth 1
+git clone https://github.com/coolsnowwolf/luci lede/luci -b openwrt-24.10 --depth 1
+git clone https://github.com/coolsnowwolf/packages lede/packages -b --depth 1
 git clone https://github.com/openwrt/packages openwrt/packages-master -b master --depth 1
 git clone https://github.com/immortalwrt/luci immortalwrt/luci-23.05 -b openwrt-23.05 --depth 1
 git clone https://github.com/immortalwrt/luci immortalwrt/luci -b master --depth 1
@@ -308,20 +310,20 @@ mv op-istore/* ./
 ##git clone https://github.com/danchexiaoyang/luci-app-syncthing luci-app-syncthing --depth 1
 ##rm -rf luci-app-syncthing/{.git,.github,README.md,install.sh}
 
-mv immortalwrt/luci-23.05/applications/luci-app-verysync ./
+mv lede/luci/applications/luci-app-verysync ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-verysync/Makefile
 sed -i 's/nas/services/' luci-app-verysync/luasrc/controller/verysync.lua
 sed -i 's/nas/services/' luci-app-verysync/luasrc/view/verysync/verysync_status.htm
 
-mv immortalwrt/packages/net/verysync ./
+mv lede/packages/net/verysync ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' verysync/Makefile
 
-mv immortalwrt/luci-23.05/applications/luci-app-syncthing ./
+mv lede/luci/applications/luci-app-syncthing ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-syncthing/Makefile
 sed -i 's/nas/services/' luci-app-syncthing/luasrc/view/syncthing/syncthing_status.htm
 sed -i 's/nas/services/' luci-app-syncthing/luasrc/controller/syncthing.lua
 
-mv immortalwrt/packages/utils/syncthing ./
+mv lede/packages/utils/syncthing ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
 
