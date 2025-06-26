@@ -9,7 +9,7 @@ mv */ /tmp/extd/
 git clone https://github.com/openwrt/luci openwrt/luci -b openwrt-23.05 --depth 1
 git clone https://github.com/openwrt/packages openwrt/packages -b openwrt-23.05 --depth 1
 git clone https://github.com/coolsnowwolf/luci lede/luci -b openwrt-24.10 --depth 1
-git clone https://github.com/coolsnowwolf/packages lede/packages -b --depth 1
+git clone https://github.com/coolsnowwolf/packages lede/packages --depth 1
 git clone https://github.com/openwrt/packages openwrt/packages-master -b master --depth 1
 git clone https://github.com/immortalwrt/luci immortalwrt/luci-23.05 -b openwrt-23.05 --depth 1
 git clone https://github.com/immortalwrt/luci immortalwrt/luci -b master --depth 1
