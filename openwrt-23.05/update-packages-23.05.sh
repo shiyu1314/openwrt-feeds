@@ -328,5 +328,5 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
 
 
-rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
+rm -rf openwrt lede immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
