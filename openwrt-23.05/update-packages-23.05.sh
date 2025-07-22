@@ -290,7 +290,7 @@ curl -s https://$mirror/openwrt-23.05/patch/aria2/aria2.conf > aria2/files/aria2
 
 
 # alist
-git clone https://github.com/sbwml/luci-app-openlist -b main op-openlist
+git clone https://github.com/sbwml/luci-app-openlist2 -b main op-openlist
 rm -rf op-openlist/{.git,.github,README.md,install.sh}
 mv op-openlist/* ./
 
