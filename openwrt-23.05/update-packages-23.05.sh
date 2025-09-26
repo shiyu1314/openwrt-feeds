@@ -324,6 +324,9 @@ sed -i 's/nas/services/' luci-app-syncthing/luasrc/controller/syncthing.lua
 mv immortalwrt/packages/utils/syncthing ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
+git clone https://github.com/theosoft-git/luci-app-easymesh luci-app-easymesh --depth 1
+rm -rf luci-app-easymesh/{.git,README.md}
+
 
 rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
