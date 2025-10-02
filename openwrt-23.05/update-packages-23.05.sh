@@ -325,7 +325,8 @@ mv immortalwrt/packages/utils/syncthing ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
 git clone https://github.com/sbwml/luci-app-quickfile --depth 1
-rm -rf {.git,.github,README.md,install.sh}
+mv luci-app-quickfile/*/ ./
+rm -rf ./{.git,.github,README.md,install.sh}
 
 
 
