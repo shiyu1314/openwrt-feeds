@@ -324,10 +324,6 @@ sed -i 's/nas/services/' luci-app-syncthing/luasrc/controller/syncthing.lua
 mv immortalwrt/packages/utils/syncthing ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
-git clone https://github.com/sbwml/luci-app-quickfile --depth 1
-rm -rf luci-app-quickfile/{.git,.github,README.md,install.sh}
-mv luci-app-quickfile/*/ ./
-
 
 
 rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
