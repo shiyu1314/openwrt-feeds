@@ -22,6 +22,19 @@ extract_deps_from_makefile() {
     fi
 }
 
+# function to find package by PKG_NAME in Makefile
+find_package_by_pkg_name() {
+    local pkg_name=$1
+    # search all Makefiles for PKG_NAME that matches our dependency
+    find immortalwrt/packages -name "Makefile" -type f | while read makefile; do
+        if grep -q "PKG_NAME.*:=.*$pkg_name" "$makefile"; then
+            dir=$(dirname "$makefile")
+            echo "$dir"
+            return 0
+        fi
+    done
+}
+
 # main dependency extraction
 for luci_app in luci-app-*; do
     if [ -d "$luci_app" ] && [ -f "$luci_app/Makefile" ]; then
@@ -34,12 +47,31 @@ for luci_app in luci-app-*; do
         for dep in $deps; do
             # clean dependency name (remove luci-app- prefix if present)
             clean_dep=${dep#luci-app-}
+            clean_dep=${clean_dep#luci-}
             
-            # search for package in immortalwrt/packages
-            found=$(find immortalwrt/packages -type d -name "$clean_dep" -o -type d -name "luci-app-$clean_dep")
+            # skip empty or invalid dependencies
+            [ -z "$clean_dep" ] && continue
+            
+            echo "  Looking for dependency: $clean_dep"
+            
+            # search for package in immortalwrt/packages - exact directory match
+            found=$(find immortalwrt/packages -type d -name "$clean_dep" -o -type d -name "luci-app-$clean_dep" -o -type d -name "luci-$clean_dep" | head -1)
+            
+            # if not found by directory name, try to find by PKG_NAME in Makefile
+            if [ -z "$found" ]; then
+                found=$(find_package_by_pkg_name "$clean_dep")
+            fi
+            
+            # if still not found, try partial directory name match
+            if [ -z "$found" ]; then
+                found=$(find immortalwrt/packages -type d -name "*${clean_dep}*" | head -1)
+            fi
+            
             if [ -n "$found" ]; then
-                echo "  Found dependency: $clean_dep"
-                cp -r $found ./
+                echo "  Found dependency: $clean_dep -> $(basename $found)"
+                cp -r "$found" ./
+            else
+                echo "  Dependency not found: $clean_dep"
             fi
         done
         
