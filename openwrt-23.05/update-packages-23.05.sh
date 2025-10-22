@@ -329,6 +329,11 @@ mv qf/* ./
 
 rm -rf qf/{.git,.github,README.md,install.sh}
 
+mv immortalwrt/luci/applications/luci-app-appfilter ./
+sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-appfilter/Makefile
+
+mv immortalwrt/packages/net/open-app-filter ./
+sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' open-app-filter/Makefile
 
 
 rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
