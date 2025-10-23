@@ -325,16 +325,12 @@ mv immortalwrt/packages/utils/syncthing ./
 sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
 git clone https://github.com/hxlls/luci-app-quickfile qf --depth 1
+rm -rf qf/{.git,.github,README.md,install.sh}
 mv qf/* ./
 
-rm -rf qf/{.git,.github,README.md,install.sh}
-
-mv immortalwrt/luci/applications/luci-app-appfilter ./
-sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-appfilter/Makefile
-
-mv immortalwrt/packages/net/open-app-filter ./
-sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' open-app-filter/Makefile
-
+git clone https://github.com/destan19/OpenAppFilter OpenAppFilter --depth 1
+rm -rf OpenAppFilter/{.git,.github,README.md,install.sh}
+mv OpenAppFilter/* ./
 
 rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
