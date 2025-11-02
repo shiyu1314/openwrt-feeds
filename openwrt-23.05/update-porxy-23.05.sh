@@ -45,4 +45,5 @@ rm -rf OpenWrt-momo
 
 
 rm -rf immortalwrt *.patch
+rm -rf img
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
