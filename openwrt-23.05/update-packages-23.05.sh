@@ -294,6 +294,8 @@ git clone https://github.com/sbwml/luci-app-openlist2 -b main op-openlist
 rm -rf op-openlist/{.git,.github,README.md,install.sh}
 mv op-openlist/* ./
 
+mv immortalwrt/luci/applications/luci-app-dockerman ./
+sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-dockerman/Makefile
 
 git clone https://github.com/sbwml/luci-theme-argon -b openwrt-24.10 op-argon
 rm -rf op-argon/{.git,.github,README.md,install.sh}
@@ -329,9 +331,6 @@ mv qf/* ./
 git clone https://github.com/destan19/OpenAppFilter OpenAppFilter --depth 1
 rm -rf OpenAppFilter/{.git,.github,README.md,install.sh}
 mv OpenAppFilter/* ./
-
-git clone https://git.cooluc.com/sbwml/luci-app-dockerman -b nft luci-app-dockerman --depth 1
-rm -rf luci-app-dockerman/{.git,.github,README.md,install.sh}
 
 rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
