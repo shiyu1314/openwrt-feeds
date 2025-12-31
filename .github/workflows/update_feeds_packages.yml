@@ -1,0 +1,37 @@
+name: Update OpenWrt Feeds(packages)
+
+on:
+  schedule:
+    - cron: '0 18 * * 1'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    name: Sync Upstream
+    runs-on: ubuntu-24.04
+    steps:
+      - name: 检查分支
+        uses: actions/checkout@main
+
+      - name: Update Feeds
+        run: |
+          export mirror=raw.githubusercontent.com/shiyu1314/openwrt-feeds/main
+          curl -sO https://$mirror/openwrt-25.12/update-packages.sh
+          bash update-packages.sh
+          rm -f update-packages.sh
+          echo "latest_release=$(TZ='Asia/Hong_Kong' date +'%Y%m%d')" >> $GITHUB_ENV
+
+      - name: Git Push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rm -rf .git
+          rm -rf .github
+          git init
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "${{ env.latest_release }}"
+          git branch -M packages
+          git remote add origin https://github-action:$GITHUB_TOKEN@github.com/shiyu1314/openwrt-feeds.git
+          git push -u origin packages --force 
