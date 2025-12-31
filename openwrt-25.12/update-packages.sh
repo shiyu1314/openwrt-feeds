@@ -285,24 +285,9 @@ mv op-openlist/* ./
 mv immortalwrt/luci/applications/luci-app-dockerman ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-dockerman/Makefile
 
-git clone https://github.com/sbwml/luci-theme-argon -b openwrt-24.10 op-argon
-rm -rf op-argon/{.git,.github,README.md,install.sh}
-mv op-argon/* ./
-
 git clone https://github.com/sbwml/package_new_istore -b main op-istore
 rm -rf op-istore/{.git,.github,README.md,install.sh}
 mv op-istore/* ./
-
-##git clone https://github.com/danchexiaoyang/luci-app-syncthing luci-app-syncthing --depth 1
-##rm -rf luci-app-syncthing/{.git,.github,README.md,install.sh}
-
-mv immortalwrt/luci/applications/luci-app-verysync ./
-sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-verysync/Makefile
-sed -i 's/nas/services/' luci-app-verysync/luasrc/controller/verysync.lua
-sed -i 's/nas/services/' luci-app-verysync/luasrc/view/verysync/verysync_status.htm
-
-mv immortalwrt/packages/net/verysync ./
-sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' verysync/Makefile
 
 mv immortalwrt/luci/applications/luci-app-syncthing ./
 sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-syncthing/Makefile
