@@ -35,12 +35,11 @@ sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' dae/Makefile
 mv openwrt-nikki/*/ ./
 rm -rf openwrt-nikki
 
-git clone https://github.com/jimliang/luci-app-homeproxy luci-app-homeproxy --depth 1
-rm -rf luci-app-homeproxy/.git
-
 git clone https://github.com/nikkinikki-org/OpenWrt-momo OpenWrt-momo --depth 1
 mv OpenWrt-momo/*/ ./
 rm -rf OpenWrt-momo
+
+mv immortalwrt/luci-app-homeproxy ./
 
 
 
