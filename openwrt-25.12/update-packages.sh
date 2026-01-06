@@ -315,5 +315,8 @@ mv op-bandix/* ./
 git clone https://github.com/eamonxg/luci-theme-aurora luci-theme-aurora --depth 1
 rm -rf luci-theme-aurora/{.git,.github,README.md,install.sh}
 
+git clone https://github.com/papagaye744/luci-theme-design luci-theme-design --depth 1
+rm -rf luci-theme-design/{.git,.github,README.md,install.sh}
+
 rm -rf openwrt immortalwrt openwrt-alist ariang-nginx openwrt-alist doc
 ls -d */ | xargs -n 1 basename | paste -sd ' ' - > packages.txt
