@@ -289,13 +289,6 @@ git clone https://github.com/sbwml/package_new_istore -b main op-istore
 rm -rf op-istore/{.git,.github,README.md,install.sh}
 mv op-istore/* ./
 
-mv immortalwrt/luci/applications/luci-app-syncthing ./
-sed -i 's|../../luci.mk|$(TOPDIR)/feeds/luci/luci.mk|' luci-app-syncthing/Makefile
-sed -i 's/nas/services/' luci-app-syncthing/luasrc/view/syncthing/syncthing_status.htm
-sed -i 's/nas/services/' luci-app-syncthing/luasrc/controller/syncthing.lua
-
-mv immortalwrt/packages/utils/syncthing ./
-sed -i 's|../../lang|$(TOPDIR)/feeds/packages/lang|' syncthing/Makefile
 
 git clone https://github.com/hxlls/luci-app-quickfile qf --depth 1
 rm -rf qf/{.git,.github,README.md,install.sh}
