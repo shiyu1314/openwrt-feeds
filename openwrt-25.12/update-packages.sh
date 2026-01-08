@@ -6,8 +6,8 @@ mkdir -p /tmp/extd/
 mv */ /tmp/extd/
 
 # download feeds
-git clone https://github.com/openwrt/luci openwrt/luci -b openwrt-24.10 --depth 1
-git clone https://github.com/openwrt/packages openwrt/packages -b openwrt-24.10 --depth 1
+git clone https://github.com/openwrt/luci openwrt/luci -b openwrt-25.12 --depth 1
+git clone https://github.com/openwrt/packages openwrt/packages -b openwrt-25.12 --depth 1
 git clone https://github.com/openwrt/packages openwrt/packages-master -b master --depth 1
 git clone https://github.com/immortalwrt/luci immortalwrt/luci -b master --depth 1
 git clone https://github.com/immortalwrt/packages immortalwrt/packages -b master --depth 1
