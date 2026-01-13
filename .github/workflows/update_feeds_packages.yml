@@ -2,7 +2,7 @@ name: Update OpenWrt Feeds(packages)
 
 on:
   schedule:
-    - cron: '0 18 * * 1'
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 jobs:
