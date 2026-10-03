@@ -1,0 +1,365 @@
+<div class="oc">
+    <link rel="stylesheet" href="/luci-static/resources/openclash/css/oc-common.css?v=<%="@OPENCLASH_VERSION@"%>">
+    <link rel="stylesheet" href="/luci-static/resources/openclash/css/oc-upload.css?v=<%="@OPENCLASH_VERSION@"%>">
+    <div class="config-upload-model-overlay" id="config-upload-overlay">
+        <div class="config-upload-model" id="config-upload-model">
+            <div class="config-upload-header">
+                <div class="config-upload-title" id="config-upload-title">
+                    <span><%:Add Config File%></span>
+                </div>
+                <div class="config-upload-actions">
+                    <button type="button" class="icon-btn" id="config-upload-close" title="<%:Close%>">
+                        <svg width="14" height="14"><use href="#oc-icon-close"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="config-upload-content">
+                <div class="upload-mode-selector">
+                    <div class="mode-tabs">
+                        <button type="button" class="mode-tab active" id="upload-mode-file" data-mode="file">
+                            <svg width="16" height="16"><use href="#oc-icon-upload"/></svg>
+                            <%:Upload File%>
+                        </button>
+                        <button type="button" class="mode-tab" id="upload-mode-subscribe" data-mode="subscribe">
+                            <svg width="15" height="15"><use href="#oc-icon-link"/></svg>
+                            <%:Subscribe Link%>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="upload-mode-content" id="mode-file-content">
+                    <div class="upload-zone" id="upload-zone">
+                        <div class="upload-icon">
+                            <svg width="48" height="48"><use href="#oc-icon-upload"/></svg>
+                        </div>
+                        <div class="upload-text">
+                            <div class="upload-primary"><%:Click to select file or drag and drop%></div>
+                            <div class="upload-secondary"><%:Support YAML file, max size 10MB%></div>
+                        </div>
+                        <input type="file" id="config-file-input" accept=".yaml,.yml" class="oc-hidden">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="advanced-options-enable-file" class="advanced-options-enable">
+                            <span class="checkmark"></span>
+                            <%:Advanced Options%>
+                        </label>
+                        <div class="form-help"><%:Show more upload options%></div>
+                    </div>
+
+                    <div class="advanced-options-container oc-hidden" id="advanced-options-container-file">
+                    </div>
+                </div>
+
+                <div class="upload-mode-content oc-hidden" id="mode-subscribe-content">
+                    <div class="subscribe-form">
+                        <div class="form-group">
+                            <label for="subscribe-url-input"><%:Subscription URL%>:<span class="guide-tag req"><%:Required%></span></label>
+                            <textarea id="subscribe-url-input" placeholder="<%:Enter subscription URL or multiple links (one per line)%>" class="form-textarea" rows="4"></textarea>
+                            <div class="form-help"><%:URI and subscription address is supported when online subscription conversion enabled, multiple links should be one per line or separated by%> |</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subscribe-ua-input"><%:User-Agent%> (<%:Optional%>):</label>
+                            <div class="form-select-wrapper">
+                                <select id="subscribe-ua-input" class="form-select">
+                                    <option value="clash-verge/v2.4.5">clash-verge/v2.4.5</option>
+                                    <option value="clash.meta/1.19.20">clash.meta/1.19.20</option>
+                                    <option value="Clash">clash</option>
+                                    <option value="custom"><%:Custom%></option>
+                                </select>
+                            </div>
+                            <input type="text" id="subscribe-ua-custom" placeholder="<%:Enter custom User-Agent%>" class="form-input oc-hidden" style="margin-top: 8px;" />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" id="sub-convert-enable">
+                                <span class="checkmark"></span>
+                                <%:Subscribe Convert Online%>
+                            </label>
+                            <div class="form-help"><%:Convert Subscribe Online With Template%></div>
+                        </div>
+
+                        <div class="sub-convert-options oc-hidden" id="sub-convert-options">
+                            <div class="sub-convert-options">
+                                <div class="form-group">
+                                    <label for="convert-address-input"><%:Convert Address%>:</label>
+                                    <div class="form-select-wrapper">
+                                        <select id="convert-address-input" class="form-select">
+                                            <option value="https://api.asailor.org/sub">api.asailor.org</option>
+                                            <option value="https://api.wcc.best/sub">api.wcc.best</option>
+                                            <option value="custom"><%:Custom%></option>
+                                        </select>
+                                    </div>
+                                    <input type="text" id="convert-address-custom" placeholder="<%:Enter custom convert address%>" class="form-input oc-hidden" style="margin-top: 8px;" />
+                                    <div id="subconverter-version-status-upload" class="subconverter-version-status" data-state="idle" hidden>
+                                        <span class="subconverter-version-label"></span>
+                                        <span class="subconverter-version-text"></span>
+                                    </div>
+                                    <div class="form-help"><%:Note: There is A Risk of Privacy Leakage in Online Convert%></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="template-select"><%:Template Name%>:</label>
+                                    <div class="form-select-wrapper">
+                                        <select id="template-select" class="form-select">
+                                            <%
+                                            local file = io.open("/usr/share/openclash/res/sub_ini.list", "r")
+                                            if file then
+                                                for line in file:lines() do
+                                                    if line ~= "" then
+                                                        local template_name = line:match("^([^,]*)")
+                                                        if template_name and template_name ~= "" then
+                                            %>
+                                            <option value="<%=template_name%>"><%=template_name%></option>
+                                            <%
+                                                        end
+                                                    end
+                                                end
+                                                file:close()
+                                            %>
+                                            <option value="0"><%:Custom Template%></option>
+                                            <%
+                                            end
+                                            %>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group oc-hidden" id="custom-template-group">
+                                    <label for="custom-template-input"><%:Custom Template URL%>:</label>
+                                    <input type="text" id="custom-template-input" placeholder="<%:Enter custom template URL%>" class="form-input" />
+                                </div>
+                            </div>
+
+                            <div class="sub-convert-options">
+                                <div class="form-row">
+                                    <div class="form-group form-half">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="emoji-enable">
+                                            <span class="checkmark"></span>
+                                            <%:Emoji%>
+                                        </label>
+                                    </div>
+                                    <div class="form-group form-half">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="udp-enable">
+                                            <span class="checkmark"></span>
+                                            <%:UDP Enable%>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group form-half">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="skip-cert-verify" checked>
+                                            <span class="checkmark"></span>
+                                            <%:skip-cert-verify%>
+                                        </label>
+                                    </div>
+                                    <div class="form-group form-half">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="sort-enable">
+                                            <span class="checkmark"></span>
+                                            <%:Sort%>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group form-half">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="node-type-enable">
+                                            <span class="checkmark"></span>
+                                            <%:Append Node Type%>
+                                        </label>
+                                    </div>
+                                    <div class="form-group form-half">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="rule-provider-enable">
+                                            <span class="checkmark"></span>
+                                            <%:Use Rule Provider%>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sub-convert-options">
+                                <div class="form-group">
+                                    <label for="custom-params-input"><%:Custom Params%>:</label>
+                                    <textarea id="custom-params-input" placeholder="<%:eg: rename=match@replace, one param per line%>" class="form-textarea" rows="3"></textarea>
+                                    <div class="form-help"><%:eg: "rename=match@replace" , "rename=\s+([2-9])[xX]@ (HIGH:$1)"%></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" id="keyword-options-enable">
+                                <span class="checkmark"></span>
+                                <%:Node Filtering%>
+                            </label>
+                            <div class="form-help"><%:Show node filter options%></div>
+                        </div>
+
+                        <div class="advanced-options-container oc-hidden" id="keyword-options-container">
+                            <div class="sub-convert-options">
+                                <div class="form-group">
+                                    <label for="keyword-input"><%:Keyword Match%> (<%:Optional%>):</label>
+                                    <textarea id="keyword-input" placeholder="<%:Enter keywords to include nodes (one per line)%>" class="form-textarea" rows="2"></textarea>
+                                    <div class="form-help"><%:eg: hk or tw&bgp%></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exclude-keyword-input"><%:Exclude Keyword Match%> (<%:Optional%>):</label>
+                                    <textarea id="exclude-keyword-input" placeholder="<%:Enter keywords to exclude nodes (one per line)%>" class="form-textarea" rows="2"></textarea>
+                                    <div class="form-help"><%:eg: hk or tw&bgp%></div>
+                                </div>
+                            </div>
+
+                            <div class="sub-convert-options">
+                                <div class="form-group">
+                                    <label for="exclude-default-select"><%:Exclude Keyword Match Default%>:</label>
+                                    <div class="form-checkbox-group">
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="exclude-expire" value="<%:Expire%>">
+                                            <span class="checkmark"></span>
+                                            <%:Expire%>
+                                        </label>
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="exclude-traffic" value="<%:Traffic%>">
+                                            <span class="checkmark"></span>
+                                            <%:Traffic%>
+                                        </label>
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="exclude-plan" value="<%:Plan%>">
+                                            <span class="checkmark"></span>
+                                            <%:Plan%>
+                                        </label>
+                                        <label class="form-checkbox">
+                                            <input type="checkbox" id="exclude-website" value="<%:Official%>">
+                                            <span class="checkmark"></span>
+                                            <%:Official%>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" id="advanced-options-enable">
+                                <span class="checkmark"></span>
+                                <%:Advanced Options%>
+                            </label>
+                            <div class="form-help"><%:Show more subscription options%></div>
+                        </div>
+
+                        <div class="advanced-options-container oc-hidden" id="advanced-options-container">
+                            <div class="sub-convert-options">
+                                <div class="form-group">
+                                    <label><%:Custom Headers%> (<%:Optional%>):</label>
+                                    <div class="form-help" style="margin-bottom:0;"><%:Add custom HTTP headers to the subscription request%></div>
+                                    <div id="subscribe-headers-container" class="oc-hidden"></div>
+                                    <button type="button" id="subscribe-headers-add" class="add-row-btn"><svg><use href="#oc-icon-add"/></svg><span><%:Add Header%></span></button>
+                                </div>
+                            </div>
+
+                            <div class="form-group sub-convert-options" id="age-encryption-group">
+                                <div class="form-group">
+                                    <label style="display:block;margin-bottom:6px;"><%:Age Key Type%></label>
+                                    <div class="oc-flex-center">
+                                        <div class="oc-flex-1">
+                                            <div class="form-select-wrapper">
+                                                <select id="age-algo-select" class="form-select">
+                                                    <option value="keygen">x25519</option>
+                                                    <option value="pq">PQ (mlkem768-x25519)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="age-generate-btn" class="icon-btn oc-ml-2" title="<%:Generate Age Key%>">
+                                            <svg width="16" height="16"><use href="#oc-icon-key"/></svg>
+                                        </button>
+                                    </div>
+                                    <div class="form-help"><%:Age Encryption For Config, Click For More:%> <a href="javascript:void(0);" onclick="window.open('https://wiki.metacubex.one/config/proxy-providers/?age-secret-key#age-secret-key', '_blank');" class="help-link"> <%:Age Encryption Introduce%></a></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age-secret-input"><%:Secret Key%>:</label>
+                                    <div class="oc-flex-center">
+                                        <input type="text" id="age-secret-input" class="form-input oc-flex-1" />
+                                        <button type="button" id="age-copy-secret" class="icon-btn oc-ml-2" title="<%:Copy%>">
+                                            <svg width="24" height="24"><use href="#oc-icon-copy-bold"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age-public-input"><%:Public Key%>:</label>
+                                    <div class="oc-flex-center">
+                                        <input type="text" id="age-public-input" class="form-input oc-flex-1" />
+                                        <button type="button" id="age-copy-public" class="icon-btn oc-ml-2" title="<%:Copy%>">
+                                            <svg width="24" height="24"><use href="#oc-icon-copy-bold"/></svg>
+                                        </button>
+                                        <button type="button" id="age-calculate-public" class="icon-btn" style="margin-left:8px;" title="<%:Calculate Public Key%>">
+                                            <svg width="16" height="16"><use href="#oc-icon-calculator"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filename-input-container">
+                    <label for="config-filename-input"><%:Config Name%>:<span class="guide-tag req"><%:Required%></span></label>
+                    <input type="text" id="config-filename-input" placeholder="<%:Enter config name (without extension)%>" class="form-input"/>
+                    <div class="filename-extension">.yaml</div>
+                </div>
+
+                <div class="upload-progress oc-hidden" id="upload-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="upload-progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="upload-progress-text"><%:Processing...%> 0%</div>
+                </div>
+            </div>
+            <div class="config-upload-footer">
+                <div class="config-upload-status">
+                    <span id="config-upload-status-text"><%:Ready to add config%></span>
+                </div>
+                <div class="config-upload-buttons">
+                    <button type="button" class="btn cancel-btn" id="config-upload-cancel"><%:Cancel%></button>
+                    <button type="button" class="btn upload-btn" id="config-upload-submit" disabled><%:Add Config%></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="config-upload-model-overlay" id="subscription-url-overlay">
+        <div class="config-upload-model" id="subscription-url-model">
+            <div class="config-upload-header">
+                <div class="config-upload-title"><%:Set Subscription Info URL%></div>
+                <button type="button" class="icon-btn" onclick="SubscriptionUrlSetter.hide()">
+                    <svg width="14" height="14"><use href="#oc-icon-close"/></svg>
+                </button>
+            </div>
+            <div class="config-upload-content">
+                <div class="form-group">
+                    <label class="highlight-label"><%:Paste the new url of subscribe infos sources here:%></label>
+                    <textarea id="subscription-url-textarea" class="form-textarea" placeholder="<%:Enter URLs, one per line, use #name=example end for specifing display name%> (https://example.com#name=example)" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="config-upload-footer">
+                <div class="config-upload-status"></div>
+                <div class="config-upload-buttons">
+                    <button type="button" class="btn cancel-btn" onclick="SubscriptionUrlSetter.hide()"><%:Cancel%></button>
+                    <button type="button" class="btn upload-btn" onclick="SubscriptionUrlSetter.submit()"><%:Submit%></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/luci-static/resources/openclash/js/oc-icons.js?v=<%="@OPENCLASH_VERSION@"%>"></script>
