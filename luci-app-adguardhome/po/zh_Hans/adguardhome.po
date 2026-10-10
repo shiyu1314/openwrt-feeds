@@ -1,0 +1,348 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_Hans\n"
+"X-Generator: manual\n"
+"Last-Translator: \n"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:435
+msgid "Action"
+msgstr "操作"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:113
+#: applications/luci-app-adguardhome/root/usr/share/luci/menu.d/luci-app-adguardhome.json:3
+msgid "AdGuard Home"
+msgstr "AdGuard Home"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:393
+msgid "AdGuardHome redirect mode"
+msgstr "AdGuardHome 重定向模式"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:137
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:244
+msgid "Advanced Settings"
+msgstr "高级设置"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:498
+msgid "Already up-to-date"
+msgstr "已是最新版本"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:396
+msgid "As the upstream server of dnsmasq"
+msgstr "作为 dnsmasq 的上游服务器"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:412
+msgid "Beta Version"
+msgstr "测试版"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:354
+msgid "Bind to specific interface:port (e.g., 0.0.0.0:3008). Leave as 0.0.0.0 to listen on all interfaces."
+msgstr "绑定到指定接口:端口（例如 0.0.0.0:3008）。设为 0.0.0.0 表示监听所有接口。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:585
+msgid "Calculation already DONE !"
+msgstr "已经计算完成！"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:373
+msgid "Change password"
+msgstr "更改密码"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:514
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:611
+msgid "Checking..."
+msgstr "检查中..."
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:519
+msgid "Checking and preparing...\n"
+msgstr "检查并准备中...\n"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:571
+msgid "Click here to Calculate"
+msgstr "点击此处计算"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:146
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:191
+msgid "Configuration file"
+msgstr "配置文件"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:89
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:192
+msgid ""
+"Configuration file must be stored in its own directory, and not in '/etc'."
+msgstr "配置文件必须存放在独立的目录中，不能直接放在 '/etc' 下。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:408
+msgid "Core Branch"
+msgstr "内核分支"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:184
+msgid "Core binary not found. Enable the service to trigger an automatic download."
+msgstr "未找到内核二进制文件。启用服务后将触发自动下载。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:163
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:257
+msgid "Core Update"
+msgstr "内核更新"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:204
+msgid "Directory where filters, logs, and statistics are stored."
+msgstr "存放过滤器、日志和统计信息的目录。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:178
+msgid "Enable"
+msgstr "启用"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:374
+msgid "Enter the password here. Click the Load calculate Module button below and go on."
+msgstr "在此输入密码。点击下方的「加载计算模块」按钮继续。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:492
+msgid "Failed"
+msgstr "失败"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:132
+msgid "File System Access"
+msgstr "文件系统访问"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:133
+msgid ""
+"Files and directories that AdGuard Home should have read-only or read-write "
+"access to."
+msgstr "AdGuard Home 应以只读或读写方式访问的文件和目录。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:441
+msgid "Force update"
+msgstr "强制更新"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:129
+msgid "General Settings"
+msgstr "常规设置"
+
+#: applications/luci-app-adguardhome/root/usr/share/rpcd/acl.d/luci-app-adguardhome.json:3
+msgid "Grant permissions for the AdGuard Home LuCI app"
+msgstr "授予 AdGuard Home LuCI 应用的访问权限"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:226
+msgid "Group the service runs under."
+msgstr "服务运行所属的用户组。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:148
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:194
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:206
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:216
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:226
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:277
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:292
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:307
+msgid "If empty, defaults to"
+msgstr "若留空，默认值为"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:411
+msgid "Latest Version"
+msgstr "最新版"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:564
+msgid "Loading..."
+msgstr "加载中..."
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:138
+msgid "Modify at your own risk."
+msgstr "修改风险自负。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:395
+msgid "No redirect"
+msgstr "不重定向"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:145
+msgid "Not installed"
+msgstr "未安装"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:24
+msgid "Not running"
+msgstr "未运行"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:424
+msgid "Official Mirror (AdTidy - Recommended)"
+msgstr "官方镜像 (AdTidy - 推荐)"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:343
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:345
+msgid "Open AdGuardHome WebUI"
+msgstr "打开 AdGuardHome 管理面板"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:193
+msgid "Parent directory will be owned by the service user."
+msgstr "上级目录将归属于服务用户。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:83
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:99
+msgid "Path must be absolute."
+msgstr "路径必须是绝对路径。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:86
+msgid "Path must not end with a slash."
+msgstr "路径不能以斜杠结尾。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:383
+msgid "Please create a new password."
+msgstr "请创建新密码。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:425
+msgid "GitHub Releases (Original)"
+msgstr "GitHub Releases (原始源)"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:207
+msgid "Read-only access"
+msgstr "只读访问"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:208
+msgid "Read-write access"
+msgstr "读写访问"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:397
+msgid "Redirect port 53 to AdGuardHome"
+msgstr "重定向 53 端口至 AdGuardHome"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:392
+msgid "Redirect"
+msgstr "重定向"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:23
+msgid "Running"
+msgstr "运行中"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:530
+msgid "Save Failed"
+msgstr "保存失败"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:409
+msgid "Select the branch for the core binary update."
+msgstr "选择内核二进制文件的更新分支。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:422
+msgid "Select the download link for the core update."
+msgstr "选择内核更新的下载链接。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:339
+msgid "Service is disabled. Please go to \"General Settings\" to enable it."
+msgstr "服务未启用。请前往「常规设置」启用。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:225
+msgid "Service group"
+msgstr "服务用户组"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:122
+msgid "Service Status"
+msgstr "服务状态"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:215
+msgid "Service user"
+msgstr "服务用户"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:161
+msgid "Services Settings"
+msgstr "服务设置"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:165
+msgid "Settings and operations for updating the AdGuardHome core binary."
+msgstr "更新 AdGuardHome 内核二进制文件的设置与操作。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:258
+msgid "Show the tab and settings for updating the AdGuardHome core binary."
+msgstr "显示用于更新 AdGuardHome 内核二进制文件的选项卡和设置。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:243
+msgid ""
+"A soft memory cap for the Go runtime, allowing the garbage collector to run "
+"more frequently as usage approaches the limit to prevent Out-of-Memory (OOM) "
+"kills."
+msgstr ""
+"Go 运行时的软内存上限。当内存使用量接近该限制时，垃圾回收器将更频繁地运行，"
+"以防止因内存耗尽 (OOM) 而被系统终止。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:138
+msgid ""
+"Go environment variables that tune garbage collector and memory management."
+msgstr "用于调节垃圾回收器和内存管理的 Go 环境变量。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:230
+msgid ""
+"The maximum number of operating system threads that can execute user-level "
+"Go code simultaneously."
+msgstr "可同时执行用户级 Go 代码的操作系统线程最大数量。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:215
+msgid ""
+"Tunes the garbage collector's aggressiveness by setting the percentage of "
+"heap growth allowed before the next collection cycle triggers."
+msgstr ""
+"通过设置触发下一次垃圾回收周期前所允许的堆增长百分比，"
+"来调节垃圾回收器的激进程度。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:440
+msgid "Update core version"
+msgstr "更新内核版本"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:421
+msgid "Update URL"
+msgstr "更新地址"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:487
+msgid "Updated"
+msgstr "已更新"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:398
+msgid "Use port 53 to replace dnsmasq"
+msgstr "使用 53 端口替换 dnsmasq"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:216
+msgid "User the service runs under."
+msgstr "服务运行所属的用户。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:236
+msgid "Verbose logging"
+msgstr "详细日志"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:119
+msgid "Version"
+msgstr "版本"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:353
+msgid "WebUI listener (address:port)"
+msgstr "WebUI 监听地址 (地址:端口)"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:205
+msgid "Will be owned by the service user."
+msgstr "将归属于服务用户。"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:203
+msgid "Working directory"
+msgstr "工作目录"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:307
+msgid "unset"
+msgstr "未设置"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:277
+msgid "unset and 100"
+msgstr "未设置时为 100"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:292
+msgid "unset and matching the number of CPUs"
+msgstr "未设置时匹配 CPU 核心数"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:376
+msgid " ... Load calculate Module ... "
+msgstr " ... 加载计算模块 ... "
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:575
+msgid " ... Load Error ... "
+msgstr " ... 加载错误 ... "
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:596
+msgid " ... Click Save/Apply ↘️ ... "
+msgstr " ... 请点击保存/应用 ↘️ ... "
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:598
+msgid " ... Nothing inputted yet ... "
+msgstr " ... 尚未输入任何内容 ... "
