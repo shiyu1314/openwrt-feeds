@@ -1,0 +1,340 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:435
+msgid "Action"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:113
+#: applications/luci-app-adguardhome/root/usr/share/luci/menu.d/luci-app-adguardhome.json:3
+msgid "AdGuard Home"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:393
+msgid "AdGuardHome redirect mode"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:137
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:244
+msgid "Advanced Settings"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:498
+msgid "Already up-to-date"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:396
+msgid "As the upstream server of dnsmasq"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:412
+msgid "Beta Version"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:354
+msgid "Bind to specific interface:port (e.g., 0.0.0.0:3008). Leave as 0.0.0.0 to listen on all interfaces."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:585
+msgid "Calculation already DONE !"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:373
+msgid "Change password"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:514
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:611
+msgid "Checking..."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:519
+msgid "Checking and preparing...\n"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:571
+msgid "Click here to Calculate"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:146
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:191
+msgid "Configuration file"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:89
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:192
+msgid ""
+"Configuration file must be stored in its own directory, and not in '/etc'."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:408
+msgid "Core Branch"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:184
+msgid "Core binary not found. Enable the service to trigger an automatic download."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:163
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:257
+msgid "Core Update"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:204
+msgid "Directory where filters, logs, and statistics are stored."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:178
+msgid "Enable"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:374
+msgid "Enter the password here. Click the Load calculate Module button below and go on."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:492
+msgid "Failed"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:132
+msgid "File System Access"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:133
+msgid ""
+"Files and directories that AdGuard Home should have read-only or read-write "
+"access to."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:441
+msgid "Force update"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:129
+msgid "General Settings"
+msgstr ""
+
+#: applications/luci-app-adguardhome/root/usr/share/rpcd/acl.d/luci-app-adguardhome.json:3
+msgid "Grant permissions for the AdGuard Home LuCI app"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:226
+msgid "Group the service runs under."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:148
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:194
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:206
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:216
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:226
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:277
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:292
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:307
+msgid "If empty, defaults to"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:411
+msgid "Latest Version"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:564
+msgid "Loading..."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:138
+msgid "Modify at your own risk."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:395
+msgid "No redirect"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:145
+msgid "Not installed"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:24
+msgid "Not running"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:424
+msgid "Official Mirror (AdTidy - Recommended)"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:343
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:345
+msgid "Open AdGuardHome WebUI"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:193
+msgid "Parent directory will be owned by the service user."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:83
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:99
+msgid "Path must be absolute."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:86
+msgid "Path must not end with a slash."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:383
+msgid "Please create a new password."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:425
+msgid "GitHub Releases (Original)"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:207
+msgid "Read-only access"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:208
+msgid "Read-write access"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:397
+msgid "Redirect port 53 to AdGuardHome"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:392
+msgid "Redirect"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:23
+msgid "Running"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:530
+msgid "Save Failed"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:409
+msgid "Select the branch for the core binary update."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:422
+msgid "Select the download link for the core update."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:339
+msgid "Service is disabled. Please go to \"General Settings\" to enable it."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:225
+msgid "Service group"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:122
+msgid "Service Status"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:215
+msgid "Service user"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:161
+msgid "Services Settings"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:165
+msgid "Settings and operations for updating the AdGuardHome core binary."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:258
+msgid "Show the tab and settings for updating the AdGuardHome core binary."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:243
+msgid ""
+"A soft memory cap for the Go runtime, allowing the garbage collector to run "
+"more frequently as usage approaches the limit to prevent Out-of-Memory (OOM) "
+"kills."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:138
+msgid ""
+"Go environment variables that tune garbage collector and memory management."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:230
+msgid ""
+"The maximum number of operating system threads that can execute user-level "
+"Go code simultaneously."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:215
+msgid ""
+"Tunes the garbage collector's aggressiveness by setting the percentage of "
+"heap growth allowed before the next collection cycle triggers."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:440
+msgid "Update core version"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:421
+msgid "Update URL"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:487
+msgid "Updated"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:398
+msgid "Use port 53 to replace dnsmasq"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:216
+msgid "User the service runs under."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:236
+msgid "Verbose logging"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:119
+msgid "Version"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:353
+msgid "WebUI listener (address:port)"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:205
+msgid "Will be owned by the service user."
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:203
+msgid "Working directory"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:307
+msgid "unset"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:277
+msgid "unset and 100"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:292
+msgid "unset and matching the number of CPUs"
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:376
+msgid " ... Load calculate Module ... "
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:575
+msgid " ... Load Error ... "
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:596
+msgid " ... Click Save/Apply ↘️ ... "
+msgstr ""
+
+#: applications/luci-app-adguardhome/htdocs/luci-static/resources/view/adguardhome/config.js:598
+msgid " ... Nothing inputted yet ... "
+msgstr ""
